@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katha 2024 @ DPS Nashik</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.stripe.com/v3/"></script> <!-- Include Stripe.js -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script> <!-- Include EmailJS -->
+    <script>
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+    </script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <h1>Katha @ DPS Nashik</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <h1>Katha Event 2024</h1>
+        <p>Join us for a spiritual journey through stories and wisdom. Reserve your spot today.</p>
+    </section>
+
+    <section id="programs" class="programs-section">
+        <h2>Select Your Program</h2>
+        <div class="program-card">
+            <h3>Katha Ticket</h3>
+            <p>Price: ₹5000</p>
+            <label for="ticketCount">Number of Tickets:</label>
+            <input type="number" id="ticketCount" min="1" value="1">
+            <button id="selectTicket">Select Ticket</button>
+        </div>
+        <div class="additional-events">
+            <h3>Select Additional Events</h3>
+            <label>
+                <input type="checkbox" class="additional-event" data-price="1000"> Special Evening Ceremony (₹1000)
+            </label>
+            <label>
+                <input type="checkbox" class="additional-event" data-price="1500"> Exclusive Q&A Session (₹1500)
+            </label>
+        </div>
+    </section>
+
+    <section id="payment" class="payment-section">
+        <h2>Payment</h2>
+        <form id="paymentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+            <label for="totalAmount">Total Amount:</label>
+            <input type="text" id="totalAmount" readonly>
+            <button type="submit">Proceed to Payment</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 DPS Nashik. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
